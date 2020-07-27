@@ -3,7 +3,7 @@
 The static template generator is a tool designed to help with the creation of static
 templates for client projects.
 
-## Things to consider
+## Things to consider
 
 This was created with [11ty](https://www.11ty.dev/), a very simple static site generator. Additional documentation can be found on the 11ty website. Assets are compiled with Gulp. The provided gulpfile has been configured to handle the compilation of `.scss` files.
 
