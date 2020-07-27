@@ -1,0 +1,25 @@
+{
+  "name": "jamie-bradley-dev",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "eleventy && gulp",
+    "serve": "eleventy --serve",
+    "dev": "eleventy --serve --watch",
+    "debug": "DEBUG=* eleventy",
+    "assets": "mkdir -p _site/ && cp -R _assets _site/"
+  },
+  "keywords": [],
+  "author": "Jamie Bradley",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.10.0",
+    "clean-css": "^4.2.3",
+    "dotenv": "^8.2.0",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.0.2",
+    "node-fetch": "^2.6.0",
+    "node-sass": "^4.13.0"
+  }
+}

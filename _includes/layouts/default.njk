@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Static Template Generator</title>
+    <meta name="Description" content="Site description">
+
+    <style>{% include "css/styles.css" %}</style>
+  </head>
+  <body>
+    {# Main Section [Content] #}
+    {{ content | safe }}
+  </body>
+</html>
