@@ -10,12 +10,10 @@ function styles(cb) {
   const target = "_includes/css";
 
   const options = {
-    outputStyle: process.env.NODE_ENV === "production" ? "compressed" : "nested"
+    outputStyle: process.env.NODE_ENV === "production" ? "compressed" : "nested",
   };
 
-  src(source)
-    .pipe(sass(options).on("error", sass.logError))
-    .pipe(dest(target));
+  src(source).pipe(sass(options).on("error", sass.logError)).pipe(dest(target));
 
   console.log("Alright, css was compiled successfully :)");
 
@@ -27,7 +25,7 @@ function styles(cb) {
  * We only need to run the scss compilation for now
  */
 function watcher(cb) {
-  watch(["resources/scss/styles.scss"], series(styles));
+  watch(["resources/scss/**/*.scss"], series(styles));
 
   cb();
 }
@@ -37,3 +35,4 @@ function watcher(cb) {
  */
 exports.default = series(styles);
 exports.watcher = watcher;
+exports.styles = styles;
