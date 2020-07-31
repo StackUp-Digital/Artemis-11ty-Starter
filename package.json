@@ -24,6 +24,7 @@
   },
   "devDependencies": {
     "@11ty/eleventy": "^0.10.0",
+    "@stackupdigital/artemis-css-standards": "^0.1.0",
     "clean-css": "^4.2.3",
     "dotenv": "^8.2.0",
     "gulp": "^4.0.2",

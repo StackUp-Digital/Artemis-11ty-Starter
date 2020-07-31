@@ -31,7 +31,7 @@ function linter(cb) {
   const source = "resources/scss/**/*.scss";
 
   const processors = [
-    stylelint(require("./stylelint.config")),
+    stylelint(require("@stackupdigital/artemis-css-standards")),
     reporter({
       clearReportedMessages: true,
     }),
