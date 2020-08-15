@@ -3,13 +3,13 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Static Template Generator</title>
+    <title>Artemis 11ty Starter</title>
     <meta name="Description" content="Site description">
-
-    <style>{% include "css/styles.css" %}</style>
+    <link href="/assets/css/styles.css" rel="stylesheet" media="screen" />
   </head>
   <body>
     {# Main Section [Content] #}
     {{ content | safe }}
+    <script src="/assets/js/index.js"></script>
   </body>
 </html>
