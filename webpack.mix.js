@@ -16,7 +16,10 @@ const paths = {
 mix.setPublicPath('./dist/assets/')
 
 // Compile the scss code
-mix.sass(paths.scss.source, paths.scss.dest).js(paths.js.source, paths.js.dest)
+mix
+  .sass(paths.scss.source, paths.scss.dest)
+  .js(paths.js.source, paths.js.dest)
+  .js('./web/resources/js/a11y.js', './js/')
 
 // If production, minify css/js
 if (mix.inProduction()) {

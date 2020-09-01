@@ -10,6 +10,12 @@
   <body>
     {# Main Section [Content] #}
     {{ content | safe }}
+
+    {# Inline Accessibility Audit Tool #}
+    {% if project.environment == "development" %}
+      <script src="/assets/js/a11y.js"></script>
+    {% endif %}
+
     <script src="/assets/js/index.js"></script>
   </body>
 </html>
