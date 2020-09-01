@@ -14,8 +14,8 @@ module.exports = (eleventyConfig) => {
     dir: {
       input: 'web',
       output: 'dist',
-      includes: 'includes',
-      data: 'globals',
+      includes: '_includes',
+      data: '_data',
     },
   }
 }
