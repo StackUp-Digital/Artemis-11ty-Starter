@@ -1,5 +1,8 @@
 // Laravel Mix
 const mix = require('laravel-mix')
+const tailwindcss = require('tailwindcss')
+
+require('laravel-mix-purgecss')
 
 // Define paths
 const paths = {
@@ -18,6 +21,15 @@ mix.setPublicPath('./dist/assets/')
 // Compile the scss code
 mix
   .sass(paths.scss.source, paths.scss.dest)
+  .options({
+    processCssUrls: false,
+    postCss: [tailwindcss('./tailwind.config.js')],
+  })
+  .purgeCss({
+    enabled: mix.inProduction(),
+    folders: ['src', 'templates'],
+    extensions: ['html', 'js', 'php', 'vue'],
+  })
   .js(paths.js.source, paths.js.dest)
   .js('./web/resources/js/a11y.js', './js/')
 
