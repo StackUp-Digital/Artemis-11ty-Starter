@@ -6,6 +6,7 @@
   "private": "true",
   "scripts": {
     "test": "jest",
+    "test:coverage": "jest --coverage",
     "dev": "webpack --watch --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js & ELEVENTY_ENV=development eleventy --serve",
     "prod": "NODE_ENV=production webpack --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js && eleventy",
     "assets:watch": "webpack --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
